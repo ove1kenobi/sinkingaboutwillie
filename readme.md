@@ -23,7 +23,9 @@ When protagonist reaches Mickey, new text shows up.
 "Press S to grab."  
 When protagonist grabs Mickey, new text shows up.  
 "Flick the mouse to yeet."  
-When the protagonist yeets Mickey off the boat, the game starts.  
+Mickey says "Hey, let me go!"  
+When the protagonist yeets Mickey off the boat, Mickey says "Not like that!"  
+Then the game starts.  
 
 ## Main gameplay
 
@@ -43,6 +45,40 @@ Each body part affects different attributes.
 - **Torso:** How far they can be thrown
 - **Limbs:** How fast they move
 - **Hands/Feet:** How much damage they make to the steering wheel
+
+#### Voicelines while walking
+
+- "You will pay for your sins!"
+- "For Mickey!"
+- "Mooo!"
+- "Mooo-ve!"
+- "Mooo-ouse!"
+- "Dot dot dot, RAGE!"
+- "Iä! Iä! Mickey Fhtaghn!"
+- "Justice will prevail!"
+- "This will finally make Mickey-senpai notice me."
+- "We've been trying to reach you about your boat's extended warranty."
+- "Hope you don't feel hurt, big boy."
+- "Nice boat. It would be a pity if something... happened to it."
+- "This doesn't belong to you."
+- "If Mickey can't have this boat, no one can!"
+
+#### Voicelines while being yeeted
+
+- "Moooo-aaaaah!"
+- "You will pay for this!"
+- *Goofy falling sound*
+- "Well, rat. Well, just you wait!"
+- "You are a worthy opponent."
+- "Help! Help! Man overboard!"
+- "If you strike me down, I shall become... *blub blub*"
+- "I'm drowning!"
+- "Oh, so this is what it feels like to be yeeted."
+- "I tried so hard and got so far, but in the end it doesn't even matter."
+- "I can see the light at the end of the tunnel! No wait, that's an angelerfish."
+- "Davy Jones, here I come!"
+- "I guess I suddenly became a marine biologist."
+- "Time to sleep with the fishes... for me, I mean."
 
 ### Possible other creatures
 
