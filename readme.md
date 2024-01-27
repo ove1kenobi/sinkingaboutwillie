@@ -4,7 +4,7 @@
 
 A/D - move left/right  
 W - jump  
-S - grab  
+S or left mouse button - grab  
 Flick the mouse - yeet  
 
 ## Story
@@ -20,7 +20,7 @@ The protagonist shows up next to him.
 Text shows up:  
 "Press A and D to move, W to jump."  
 When protagonist reaches Mickey, new text shows up.  
-"Press S to grab."  
+"Press S or left mouse button to grab."  
 When protagonist grabs Mickey, new text shows up.  
 "Flick the mouse to yeet."  
 Mickey says "Hey, let me go!"  
