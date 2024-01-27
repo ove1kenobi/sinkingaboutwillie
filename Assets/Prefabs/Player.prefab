@@ -427,6 +427,7 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 6c88b68682a7c3e4084ab79f55283307, type: 2}
   armHolder: {fileID: 4771719593426003382}
   grabPos: {fileID: 2344914212180034614}
+  Wheel: {fileID: 0}
   bodyAnim: {fileID: 761781531404893800}
   armAnim: {fileID: 4591393728798156960}
   groundCheckSize: {x: 1.26, y: 1.07, z: 0}
@@ -438,6 +439,9 @@ MonoBehaviour:
   grabableLayer:
     serializedVersion: 2
     m_Bits: 64
+  wheelLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!50 &6264595067980932619
 Rigidbody2D:
   serializedVersion: 4

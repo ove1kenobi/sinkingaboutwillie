@@ -1441,29 +1441,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1415164506}
     - target: {fileID: 406739071388296236, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
-      propertyPath: grabPos
-      value: 
-      objectReference: {fileID: 5004174209952964172}
-    - target: {fileID: 406739071388296236, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
-      propertyPath: grabCheckSize.x
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 406739071388296236, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
-      propertyPath: grabCheckSize.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 406739071388296236, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
       propertyPath: wheelLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
-    - target: {fileID: 406739071388296236, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
-      propertyPath: grabableLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4038327781766955277, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6257548865944294126, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1513,11 +1493,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
---- !u!4 &5004174209952964172 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2344914212180034614, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
-  m_PrefabInstance: {fileID: 5004174209952964171}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
