@@ -16,7 +16,7 @@ public class playerScript : MonoBehaviour
     [Space(10)]
     private Vector3 mousePos;
     public Vector3 groundCheckSize, groundCheckOffset;
-    private Vector3 wheelGrabbedPoint;
+    private float wheelGrabbedStartRot, wheelStartRot;
 
     [Space(10)]
     public Vector3 grabCheckSize;
@@ -85,7 +85,11 @@ public class playerScript : MonoBehaviour
             heldObject = null;
             grabbingWheel = Physics2D.OverlapBox(grabPos.position, grabCheckSize, 0, wheelLayer);
             if (grabbingWheel)
-                wheelGrabbedPoint = grabPos.position;
+            {
+                wheelGrabbedStartRot = armHolder.eulerAngles.z;
+                wheelStartRot = Wheel.transform.eulerAngles.z;
+            }
+
         }
     }
     private void Hold()
@@ -97,7 +101,7 @@ public class playerScript : MonoBehaviour
         }
         if (grabbingWheel)
         {
-            
+            Wheel.transform.rotation = Quaternion.Euler(new Vector3(0,0, wheelStartRot+(wheelGrabbedStartRot- armHolder.eulerAngles.z) * stats.wheelRotSpeed));
         }
     }
     private void releaseHold()

@@ -10,5 +10,5 @@ public class playerStats : ScriptableObject
     public float jumpHeight;
     public float gravityScale;
     [Space(10)]
-    public float throwForce;
+    public float throwForce, wheelRotSpeed;
 }

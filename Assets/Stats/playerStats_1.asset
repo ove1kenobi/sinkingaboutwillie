@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: playerStats_1
   m_EditorClassIdentifier: 
   moveSpeed: 35
-  runAcceleration: 50
+  runAcceleration: 34
   runDecceleration: 20
   runVelocity: 1
   frictionAmount: 0.2
   jumpHeight: 2000
   gravityScale: 10
   throwForce: 10
+  wheelRotSpeed: 1
