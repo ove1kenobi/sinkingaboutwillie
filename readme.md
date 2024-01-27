@@ -4,7 +4,7 @@
 
 A/D - move left/right  
 W - jump  
-S - grab  
+S or left mouse button - grab  
 Flick the mouse - yeet  
 
 ## Story
@@ -20,7 +20,7 @@ The protagonist shows up next to him.
 Text shows up:  
 "Press A and D to move, W to jump."  
 When protagonist reaches Mickey, new text shows up.  
-"Press S to grab."  
+"Press S or left mouse button to grab."  
 When protagonist grabs Mickey, new text shows up.  
 "Flick the mouse to yeet."  
 Mickey says "Hey, let me go!"  
@@ -34,6 +34,7 @@ The steering wheel has a life meter that goes down when it is attacked.
 You have to grab the creatures and yeet them off the boat.  
 If you stay away from the steering wheel for too long, the boat starts to wobble.  
 You have to get back to the steering wheel to stabilize it.  
+Each second you survive, the score increases by one.  
 
 ## Creatures
 
