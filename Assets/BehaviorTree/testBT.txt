@@ -1,5 +1,9 @@
-root
-	sequence: name
-		leaf: walk
-		leaf: grab
-		leaf: throw
+root: agent
+	selector: this or that
+		sequence: (this) throw the thing
+			condition: find the thing
+			action: grab
+			action: throw
+		selector: (that) get ball or shoot
+			action: pick up red ball
+			action: shoot arrow
