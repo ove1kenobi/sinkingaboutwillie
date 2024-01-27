@@ -48,42 +48,69 @@ namespace BehaviorTree
 				{
 					case "root":
 						root = new Repeater(null, desc);
-						current = root;
+						node = root;
 						break;
 					case "sequence":
 						node = new Sequence(current, desc);
 						current.AddChild(node);
-						current = node;
 						break;
 					case "selector":
 						node = new Selector(current, desc);
 						current.AddChild(node);
-						current = node;
 						break;
 					case "succeeder":
 						node = new Succeeder(current, desc);
 						current.AddChild(node);
-						current = node;
 						break;
 					case "inverter":
 						node = new Inverter(current, desc);
 						current.AddChild(node);
-						current = node;
 						break;
 					case "repeater":
 						node = new Repeater(current, desc);
 						current.AddChild(node);
-						current = node;
-						break;
-					case "action":
-						node = new Action(current, desc);
-						current.AddChild(node);
 						break;
 					case "condition":
-						node = new Condition(current, desc);
+						switch (desc)
+						{
+							case "grabbed by ricky"
+								node = new Grabbed(current, desc);
+								break;
+							case "in the air"
+								node = new InAir(current, desc);
+								break;
+							case "close to helm"
+								node = new NextToHelm(current, desc);
+								break;
+							case "on ground":
+								node = new OnGround(current, desc);
+								break;
+						}
+						current.AddChild(node);
+						break;
+					case "action":
+						switch (desc)
+						{
+							case "idle"
+								node = new Idle(current, desc);
+								break;
+							case "flail limbs":
+								node = new Flail(current, desc);
+								break;
+							case "attack helm":
+								node = new AttackHelm(current, desc);
+								break;
+							case "set goal":
+								node = new SetGoal(current, desc);
+								break;
+							case "move toward goal":
+								node = new MoveToGoal(current, desc);
+								break;
+						}
 						current.AddChild(node);
 						break;
 				}
+				current = node;
 			}
 
 			current = root;
@@ -233,7 +260,7 @@ namespace BehaviorTree
 		{
 		// process child
 		// return success
-			return Status.Running;
+			return Status.Success;
 		}
 	}
 	
@@ -288,37 +315,117 @@ namespace BehaviorTree
         public override abstract Status Process();
 	}
 
-	public class Action : Leaf
-	{
-		public Action(Node parent, string description)
-		{
-			this.parent = parent;
-			this.description = description;
-		}
-		
-		public override Status Process()
-		{
-		// do stuff
-		// while process not complete return running
-		// return success or fail depending on result	
-			return Status.Running;
-		}
-	}
-
 	public class Condition : Leaf
 	{
-		public Condition(Node parent, string description)
-		{
-			this.parent = parent;
-			this.description = description;
-		}
-		
-		public override Status Process()
-		{
-		// do stuff
-		// while process not complete return running
-		// return success or fail depending on result	
-			return Status.Running;
-		}
+		public override abstract Status Process();
 	}
+
+	public class Action : Leaf
+	{
+		public override abstract Status Process();
+	}
+	/*
+	 *    The Actual Leafs
+	 */
+
+	public class Grabbed : Condition
+	{
+		public Grabbed(Node parent, string description)
+		{
+			this.parent = parent; this.description = description;
+		}
+        public override Status Process()
+        {
+            return Status:Success;
+        }
+    }
+	public class InAir : Condition
+	{
+		public InAir(Node parent, string description)
+		{
+			this.parent = parent; this.description = description;
+		}
+        public override Status Process()
+        {
+            return Status:Success;
+        }
+	}
+	public class NextToHelm : Condition
+	{
+		public NextToHelm(Node parent, string description)
+		{
+			this.parent = parent; this.description = description;
+		}
+        public override Status Process()
+        {
+            return Status:Success;
+        }
+	}
+	public class OnGround : Condition
+	{
+		public OnGround(Node parent, string description)
+		{
+			this.parent = parent; this.description = description;
+		}
+        public override Status Process()
+        {
+            return Status:Success;
+        }
+	}
+	public class Idle : Action
+	{
+		public Idle(Node parent, string description)
+		{
+			this.parent = parent; this.description = description;
+		}
+        public override Status Process()
+        {
+            return Status:Success;
+        }
+	}
+	public class Flail : Action
+	{
+		public Flail(Node parent, string description)
+		{
+			this.parent = parent; this.description = description;
+		}
+        public override Status Process()
+        {
+            return Status:Success;
+        }
+	}
+	public class AttackHelm : Action
+	{
+		public AttackHelm(Node parent, string description)
+		{
+			this.parent = parent; this.description = description;
+		}
+        public override Status Process()
+        {
+            return Status:Success;
+        }
+	}
+	public class SetGoal : Action
+	{
+		public SetGoal(Node parent, string description)
+		{
+			this.parent = parent; this.description = description;
+		}
+        public override Status Process()
+        {
+            return Status:Success;
+        }
+	}
+	public class MoveToGoal : Action
+	{
+		public MoveToGoal(Node parent, string description)
+		{
+			this.parent = parent; this.description = description;
+		}
+        public override Status Process()
+        {
+            return Status:Success;
+        }
+	}
+
 }

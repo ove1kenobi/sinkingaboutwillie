@@ -1,9 +1,16 @@
-root: agent
-	selector: this or that
-		sequence: (this) throw the thing
-			condition: find the thing
-			action: grab
-			action: throw
-		selector: (that) get ball or shoot
-			action: pick up red ball
-			action: shoot arrow
+root: enemy
+	selector: the works
+		sequence: idle if grabbed
+			condition: grabbed by ricky
+			action: idle
+		sequence: being thrown
+			condition: in the air
+			action: flail limbs
+		selector: on ground
+			sequence: destroy helm
+				condition: close to helm
+				action: attack helm
+			sequence: move toward helm
+				condition: on ground
+				action: set goal
+				action: move toward goal
