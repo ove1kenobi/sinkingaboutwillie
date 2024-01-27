@@ -34,6 +34,7 @@ The steering wheel has a life meter that goes down when it is attacked.
 You have to grab the creatures and yeet them off the boat.  
 If you stay away from the steering wheel for too long, the boat starts to wobble.  
 You have to get back to the steering wheel to stabilize it.  
+Each second you survive, the score increases by one.  
 
 ## Creatures
 
