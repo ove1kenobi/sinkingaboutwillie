@@ -1217,6 +1217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966106966}
   - component: {fileID: 1966106965}
+  - component: {fileID: 1966106967}
   m_Layer: 0
   m_Name: YesBoat
   m_TagString: Untagged
@@ -1291,6 +1292,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966106967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966106964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ababe86cbe29a4041a7863c11999e54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wheel: {fileID: 1415164505}
+  rotateSpeed: 0.5
 --- !u!1 &1981476240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,6 +1451,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 406739071388296236, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
+      propertyPath: boat
+      value: 
+      objectReference: {fileID: 1966106967}
     - target: {fileID: 406739071388296236, guid: 01a49c9b3f53cc04883156a158eee831, type: 3}
       propertyPath: Wheel
       value: 

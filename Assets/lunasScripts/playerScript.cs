@@ -12,6 +12,7 @@ public class playerScript : MonoBehaviour
     private SpriteRenderer bodyRenderer;
     private GameObject heldObject;
     private Rigidbody2D heldRb;
+    public boatScript boat;
 
     [Space(10)]
     private Vector3 mousePos;
@@ -102,6 +103,8 @@ public class playerScript : MonoBehaviour
         if (grabbingWheel)
         {
             Wheel.transform.rotation = Quaternion.Euler(new Vector3(0,0, wheelStartRot+(wheelGrabbedStartRot- armHolder.eulerAngles.z) * stats.wheelRotSpeed));
+            
+            boat.rotateBoat(Wheel.transform.rotation);
         }
     }
     private void releaseHold()
