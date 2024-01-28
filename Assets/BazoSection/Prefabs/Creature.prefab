@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5112537052794911065}
   - component: {fileID: 7638832316488568764}
   - component: {fileID: 6788955451681803181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftLowerArm
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 6927722595941019963}
   - component: {fileID: 4391341320660781059}
   - component: {fileID: 8082082394441805578}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftLowerLeg
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 7674455915097628148}
   - component: {fileID: 5036458719813293798}
   - component: {fileID: 1956439932150227181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 6281134136714415605}
   - component: {fileID: 7662700519362473820}
   - component: {fileID: 286047127849784631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightFoot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 6771479190830810630}
   - component: {fileID: 7287028179125908649}
   - component: {fileID: 5864239541285224790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftUpperLeg
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 1625922887640955481}
   - component: {fileID: 2539857493960892968}
   - component: {fileID: 1053916445435586067}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftUpperArm
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1057,7 +1057,7 @@ GameObject:
   - component: {fileID: 1033789925489540894}
   - component: {fileID: 2619994632363877754}
   - component: {fileID: 6303235774139454708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightLowerLeg
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1230,7 +1230,7 @@ GameObject:
   - component: {fileID: 323196409068520083}
   - component: {fileID: 2057751709708631976}
   - component: {fileID: 7525629355185261825}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Neck
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1368,7 +1368,7 @@ GameObject:
   - component: {fileID: 9159990039269244040}
   - component: {fileID: 5723066128847620892}
   - component: {fileID: 9010676354408865650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torso
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1517,7 +1517,7 @@ GameObject:
   - component: {fileID: 642195242395774218}
   - component: {fileID: 3826190719349814482}
   - component: {fileID: 2979580439757449923}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftFoot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1691,7 +1691,7 @@ GameObject:
   - component: {fileID: 8961415767078757438}
   - component: {fileID: 4322594446570027607}
   - component: {fileID: 2984604052953796885}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightHand
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1863,7 +1863,7 @@ GameObject:
   - component: {fileID: 9005157052214373473}
   - component: {fileID: 8854475349116803619}
   - component: {fileID: 8771869874426166814}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Creature
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1946,7 +1946,7 @@ GameObject:
   - component: {fileID: 7831636181845446999}
   - component: {fileID: 6601197180888794048}
   - component: {fileID: 1435636040881154140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightLowerArm
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2120,7 +2120,7 @@ GameObject:
   - component: {fileID: 70954350076641896}
   - component: {fileID: 6901662853459149606}
   - component: {fileID: 1389801418709337093}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightUpperLeg
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2294,7 +2294,7 @@ GameObject:
   - component: {fileID: 5847511074386088350}
   - component: {fileID: 8597136901695297772}
   - component: {fileID: 248261295263223620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftHand
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2468,7 +2468,7 @@ GameObject:
   - component: {fileID: 9159372245655801809}
   - component: {fileID: 9221375918765801906}
   - component: {fileID: 1180524614863018363}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightUpperArm
   m_TagString: Enemy
   m_Icon: {fileID: 0}
