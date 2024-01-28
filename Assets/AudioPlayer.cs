@@ -11,6 +11,13 @@ public class AudioPlayer : MonoBehaviour
     private void Start ()
     {
         audioSource = GetComponent<AudioSource> ();
+        if (clips.Length > 0)
+        {
+            int randomIndex = Random.Range (0, clips.Length);
+            AudioClip randomClip = clips [randomIndex];
+            audioSource.clip = randomClip;
+            //audioSource.PlayOneShot (randomClip);
+        }
     }
 
     private void Update ()
