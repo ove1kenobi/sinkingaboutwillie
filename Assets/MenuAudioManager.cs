@@ -28,9 +28,12 @@ public class MenuAudioManager : MonoBehaviour
         // Get the audio source of the 2nd audio track
         var timelineAsset = (TimelineAsset) director.playableAsset;
         var audioTrack = (AudioTrack) timelineAsset.GetOutputTrack (audioTrackIndex);
-        //var clipPlayableAsset = audioTrack.GetClips ().FirstOrDefault ()?.asset as AudioClip;
-        audioclipz = audioTrack.GetClips ().FirstOrDefault ()?.asset as AudioClip;
-        //AudioSource audioSource = clipPlayableAsset.GetComponentInParent<AudioSource>();
+        var timelineClip = audioTrack.GetClips ().FirstOrDefault ();
+        //audioclipz = audioTrack.GetClips ().FirstOrDefault ()?.asset as AudioClip;
+        //AudioSource audioSource = timelineClip.GetComponentInParent<AudioSource>();
+        
+        
+        //audioSource = timelineClip.sourceGameObject.GetComponent<AudioSource> ();
 
     }
 
