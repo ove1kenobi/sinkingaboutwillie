@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class scenemanager : MonoBehaviour
 {
     public Button start;
+    public Button quit;
     
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,10 @@ public class scenemanager : MonoBehaviour
        start.onClick.AddListener(() =>
        {
            SceneManager.LoadScene("TestScene");
+       });
+       quit.onClick.AddListener(() =>
+       {
+           Application.Quit();
        });
     }
 
