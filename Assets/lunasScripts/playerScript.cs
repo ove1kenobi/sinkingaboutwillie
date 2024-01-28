@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class playerScript : MonoBehaviour
 {
@@ -47,6 +48,18 @@ public class playerScript : MonoBehaviour
         Run();
         #endregion
 
+        Variables v = GameObject.Find("HelmTimer").GetComponent<Variables>();
+        if (v != null) 
+        {
+           v.declarations.Set("IsGrabbed", false);
+        }
+        Transform wheel = GameObject.Find("Wheel").GetComponent<Transform>();
+        float dist = (gameObject.GetComponent<Transform>().position - wheel.position).sqrMagnitude;
+        if(dist > 0.1 && grabbingWheel) 
+        {
+            releaseHold();
+        }
+        
         #region arms
         moveArms();
         if (Input.GetButtonDown("Grab")) Grab();
@@ -89,6 +102,7 @@ public class playerScript : MonoBehaviour
             {
                 wheelGrabbedStartRot = armHolder.eulerAngles.z;
                 wheelStartRot = Wheel.transform.eulerAngles.z;
+
             }
 
         }
@@ -106,6 +120,12 @@ public class playerScript : MonoBehaviour
             Wheel.transform.rotation = Quaternion.Euler(new Vector3(0,0, wheelStartRot+(wheelGrabbedStartRot- armHolder.eulerAngles.z) * stats.wheelRotSpeed));
             
             boat.rotateBoat(wheelGrabbedStartRot - armHolder.eulerAngles.z);
+
+            Variables v = GameObject.Find("HelmTimer").GetComponent<Variables>();
+            if (v != null) 
+            {
+                v.declarations.Set("IsGrabbed", true);
+            }
         }
     }
     private void releaseHold()
