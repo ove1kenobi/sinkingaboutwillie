@@ -1306,8 +1306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ababe86cbe29a4041a7863c11999e54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wheel: {fileID: 1415164505}
-  rotateSpeed: 0.5
+  Wheel: {fileID: 5606029747558644978}
+  healSpeed: 0.5
+  damageSpeed: 0.15
+  boatHealth: 0
 --- !u!1 &1981476240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1577,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e31452fffb69519449c363eacc4ee9db, type: 3}
+--- !u!1 &5606029747558644978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3916537294264066184, guid: e31452fffb69519449c363eacc4ee9db, type: 3}
+  m_PrefabInstance: {fileID: 5606029747558644977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

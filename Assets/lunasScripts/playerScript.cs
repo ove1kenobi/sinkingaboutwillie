@@ -105,7 +105,7 @@ public class playerScript : MonoBehaviour
         {
             Wheel.transform.rotation = Quaternion.Euler(new Vector3(0,0, wheelStartRot+(wheelGrabbedStartRot- armHolder.eulerAngles.z) * stats.wheelRotSpeed));
             
-            boat.rotateBoat(Wheel.transform.rotation);
+            boat.rotateBoat(wheelGrabbedStartRot - armHolder.eulerAngles.z);
         }
     }
     private void releaseHold()
