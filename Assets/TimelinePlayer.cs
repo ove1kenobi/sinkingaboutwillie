@@ -23,9 +23,9 @@ public class TimelinePlayer : MonoBehaviour
     public void Update ()
     {
 
-        if (Input.GetKeyDown ("space"))
-        {
-            StartTimeline();
-        }
+        //if (Input.GetKeyDown ("space"))
+        //{
+        //    StartTimeline();
+        //}
     }
 } 

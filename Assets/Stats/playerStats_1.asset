@@ -19,5 +19,5 @@ MonoBehaviour:
   frictionAmount: 0.2
   jumpHeight: 2000
   gravityScale: 10
-  throwForce: 10
+  throwForce: 20
   wheelRotSpeed: 1

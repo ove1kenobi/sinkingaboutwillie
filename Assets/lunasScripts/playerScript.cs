@@ -97,7 +97,8 @@ public class playerScript : MonoBehaviour
     {
         if(heldObject != null)
         {
-            heldObject.transform.position = grabPos.position;
+            //heldObject.transform.position = grabPos.position;
+            heldRb.position = grabPos.position;
             heldRb.velocity = new Vector2(0, 0);
         }
         if (grabbingWheel)
