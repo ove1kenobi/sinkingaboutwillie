@@ -73,13 +73,13 @@ namespace BehaviorTree
 					case "condition":
 						switch (desc)
 						{
-							case "grabbed by ricky"
+							case "grabbed by ricky":
 								node = new Grabbed(current, desc);
 								break;
-							case "in the air"
+							case "in the air":
 								node = new InAir(current, desc);
 								break;
-							case "close to helm"
+							case "close to helm":
 								node = new NextToHelm(current, desc);
 								break;
 							case "on ground":
@@ -91,7 +91,7 @@ namespace BehaviorTree
 					case "action":
 						switch (desc)
 						{
-							case "idle"
+							case "idle":
 								node = new Idle(current, desc);
 								break;
 							case "flail limbs":
@@ -315,12 +315,12 @@ namespace BehaviorTree
         public override abstract Status Process();
 	}
 
-	public class Condition : Leaf
+	public abstract class Condition : Leaf
 	{
 		public override abstract Status Process();
 	}
 
-	public class Action : Leaf
+	public abstract class Action : Leaf
 	{
 		public override abstract Status Process();
 	}
@@ -336,7 +336,7 @@ namespace BehaviorTree
 		}
         public override Status Process()
         {
-            return Status:Success;
+            return Status.Success;
         }
     }
 	public class InAir : Condition
@@ -347,7 +347,7 @@ namespace BehaviorTree
 		}
         public override Status Process()
         {
-            return Status:Success;
+            return Status.Success;
         }
 	}
 	public class NextToHelm : Condition
@@ -358,7 +358,7 @@ namespace BehaviorTree
 		}
         public override Status Process()
         {
-            return Status:Success;
+            return Status.Success;
         }
 	}
 	public class OnGround : Condition
@@ -369,7 +369,7 @@ namespace BehaviorTree
 		}
         public override Status Process()
         {
-            return Status:Success;
+            return Status.Success;
         }
 	}
 	public class Idle : Action
@@ -380,7 +380,7 @@ namespace BehaviorTree
 		}
         public override Status Process()
         {
-            return Status:Success;
+            return Status.Success;
         }
 	}
 	public class Flail : Action
@@ -391,7 +391,7 @@ namespace BehaviorTree
 		}
         public override Status Process()
         {
-            return Status:Success;
+            return Status.Success;
         }
 	}
 	public class AttackHelm : Action
@@ -402,7 +402,7 @@ namespace BehaviorTree
 		}
         public override Status Process()
         {
-            return Status:Success;
+            return Status.Success;
         }
 	}
 	public class SetGoal : Action
@@ -413,7 +413,7 @@ namespace BehaviorTree
 		}
         public override Status Process()
         {
-            return Status:Success;
+            return Status.Success;
         }
 	}
 	public class MoveToGoal : Action
@@ -424,7 +424,7 @@ namespace BehaviorTree
 		}
         public override Status Process()
         {
-            return Status:Success;
+            return Status.Success;
         }
 	}
 
