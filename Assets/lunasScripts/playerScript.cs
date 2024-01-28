@@ -49,16 +49,16 @@ public class playerScript : MonoBehaviour
         #endregion
 
         Variables v = GameObject.Find("HelmTimer").GetComponent<Variables>();
-        if (v != null) 
-        {
-           v.declarations.Set("IsGrabbed", false);
-        }
         Transform wheel = GameObject.Find("Wheel").GetComponent<Transform>();
         float dist = (gameObject.GetComponent<Transform>().position - wheel.position).sqrMagnitude;
-        if(dist > 0.1 && grabbingWheel) 
+        if (grabbingWheel)
         {
-            releaseHold();
-        }
+            if(dist > 30.0) 
+            {
+                if (v != null) v.declarations.Set("IsGrabbed", false);
+                releaseHold();
+            }
+        } else if (v != null) v.declarations.Set("IsGrabbed", false);
         
         #region arms
         moveArms();
@@ -103,6 +103,11 @@ public class playerScript : MonoBehaviour
                 wheelGrabbedStartRot = armHolder.eulerAngles.z;
                 wheelStartRot = Wheel.transform.eulerAngles.z;
 
+                Variables v = GameObject.Find("HelmTimer").GetComponent<Variables>();
+                if (v != null) 
+                {
+                    v.declarations.Set("IsGrabbed", true);
+                }
             }
 
         }
@@ -120,12 +125,6 @@ public class playerScript : MonoBehaviour
             Wheel.transform.rotation = Quaternion.Euler(new Vector3(0,0, wheelStartRot+(wheelGrabbedStartRot- armHolder.eulerAngles.z) * stats.wheelRotSpeed));
             
             boat.rotateBoat(wheelGrabbedStartRot - armHolder.eulerAngles.z);
-
-            Variables v = GameObject.Find("HelmTimer").GetComponent<Variables>();
-            if (v != null) 
-            {
-                v.declarations.Set("IsGrabbed", true);
-            }
         }
     }
     private void releaseHold()
