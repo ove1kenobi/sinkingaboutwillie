@@ -1697,9 +1697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db08188220c011249bcf2ac5556573d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_interference: {fileID: 1269304082}
-  m_volume: {fileID: 508611999}
-  m_analogGlitchVolume: {fileID: 0}
+  director: {fileID: 1269304083}
+  audioTrackIndex: 1
 --- !u!1 &1707629888
 GameObject:
   m_ObjectHideFlags: 0
