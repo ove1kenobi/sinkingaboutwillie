@@ -152,7 +152,9 @@ public class playerScript : MonoBehaviour
         float accelRate = (Mathf.Abs(targetSpeed) > .01f) ? stats.runAcceleration : stats.runDecceleration;
         float movement = Mathf.Pow(Mathf.Min(Mathf.Abs(speedDif), stats.moveSpeed) * accelRate, stats.runVelocity) * Mathf.Sign(speedDif);
 
-        if (Mathf.Abs(rb.velocity.x) < stats.moveSpeed)
+        // Only add force velocity is not max
+        // or if target speed is in opposite direction
+        if (Mathf.Abs(rb.velocity.x) < stats.moveSpeed || Mathf.Sign(speedDif) != Math.Sign(targetSpeed))
             rb.AddForce(movement * transform.right);
 
         spriteFlipped = x < 0f ? true : x > 0f ? false : spriteFlipped;
