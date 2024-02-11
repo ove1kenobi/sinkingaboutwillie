@@ -8,24 +8,29 @@ public class scenemanager : MonoBehaviour
 {
     public Button start;
     public Button quit;
-    
+    public Button highScore;
+
     // Start is called before the first frame update
     void Start()
     {
-       start.onClick.AddListener(() =>
-       {
-           SceneManager.LoadScene("TestScene");
-       });
-       quit.onClick.AddListener(() =>
-       {
-           Application.Quit();
-       });
+        start.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("TestScene");
+        });
+        highScore.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("HighScore");
+        });
+        quit.onClick.AddListener(() =>
+        {
+            Application.Quit();
+        });
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 }

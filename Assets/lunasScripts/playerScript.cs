@@ -53,13 +53,14 @@ public class playerScript : MonoBehaviour
         float dist = (gameObject.GetComponent<Transform>().position - wheel.position).sqrMagnitude;
         if (grabbingWheel)
         {
-            if(dist > 30.0) 
+            if (dist > 30.0)
             {
                 if (v != null) v.declarations.Set("IsGrabbed", false);
                 releaseHold();
             }
-        } else if (v != null) v.declarations.Set("IsGrabbed", false);
-        
+        }
+        else if (v != null) v.declarations.Set("IsGrabbed", false);
+
         #region arms
         moveArms();
         if (Input.GetButtonDown("Grab")) Grab();
@@ -95,7 +96,7 @@ public class playerScript : MonoBehaviour
             heldRb = heldObject.transform.GetComponent<Rigidbody2D>();
         }
         else
-        { 
+        {
             heldObject = null;
             grabbingWheel = Physics2D.OverlapBox(grabPos.position, grabCheckSize, 0, wheelLayer);
             if (grabbingWheel)
@@ -104,7 +105,7 @@ public class playerScript : MonoBehaviour
                 wheelStartRot = Wheel.transform.eulerAngles.z;
 
                 Variables v = GameObject.Find("HelmTimer").GetComponent<Variables>();
-                if (v != null) 
+                if (v != null)
                 {
                     v.declarations.Set("IsGrabbed", true);
                 }
@@ -114,7 +115,7 @@ public class playerScript : MonoBehaviour
     }
     private void Hold()
     {
-        if(heldObject != null)
+        if (heldObject != null)
         {
             //heldObject.transform.position = grabPos.position;
             heldRb.position = grabPos.position;
@@ -122,8 +123,8 @@ public class playerScript : MonoBehaviour
         }
         if (grabbingWheel)
         {
-            Wheel.transform.rotation = Quaternion.Euler(new Vector3(0,0, wheelStartRot+(wheelGrabbedStartRot- armHolder.eulerAngles.z) * stats.wheelRotSpeed));
-            
+            Wheel.transform.rotation = Quaternion.Euler(new Vector3(0, 0, wheelStartRot + (wheelGrabbedStartRot - armHolder.eulerAngles.z) * stats.wheelRotSpeed));
+
             boat.rotateBoat(wheelGrabbedStartRot - armHolder.eulerAngles.z);
         }
     }
@@ -132,7 +133,7 @@ public class playerScript : MonoBehaviour
         grabbing = false;
         if (heldObject != null)
         {
-            heldRb.AddForce(mouseDelta * (stats.throwForce*1000));
+            heldRb.AddForce(mouseDelta * (stats.throwForce * 1000));
         }
         grabbingWheel = false;
         heldObject = null;
@@ -149,9 +150,10 @@ public class playerScript : MonoBehaviour
         float targetSpeed = x * stats.moveSpeed;
         float speedDif = targetSpeed - rb.velocity.x;
         float accelRate = (Mathf.Abs(targetSpeed) > .01f) ? stats.runAcceleration : stats.runDecceleration;
-        float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, stats.runVelocity) * Mathf.Sign(speedDif);
+        float movement = Mathf.Pow(Mathf.Min(Mathf.Abs(speedDif), stats.moveSpeed) * accelRate, stats.runVelocity) * Mathf.Sign(speedDif);
 
-        rb.AddForce(movement * transform.right);
+        if (Mathf.Abs(rb.velocity.x) < stats.moveSpeed)
+            rb.AddForce(movement * transform.right);
 
         spriteFlipped = x < 0f ? true : x > 0f ? false : spriteFlipped;
         bodyRenderer.flipX = spriteFlipped;
